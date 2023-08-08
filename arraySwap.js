@@ -3,6 +3,7 @@
  * store length of array in a variable to run a loop for fixed times
  * then run a loop and check for all 1 and slice them and push them in end of array at same time reduce counter by 1
  * the returned value from splice is in array form so convert in into string
+ * Convert all string elements of array into numbers
  *
  */
 
@@ -10,9 +11,13 @@ function arraySw(arr) {
   let len = arr.length;
   for (let i = 0; i < len; i++) {
     if (arr[i] === 1) {
-      arr.push(arr.splice(i, 1).join(""));
+      let p = arr.splice(i, 1).join("");
+      arr.push(p);
       i--;
     }
+  }
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = parseInt(arr[i]);
   }
   return arr;
 }
