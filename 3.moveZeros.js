@@ -11,8 +11,7 @@ function arraySw(arr) {
   let len = arr.length;
   for (let i = 0; i < len; i++) {
     if (arr[i] === 1) {
-      let p = arr.splice(i, 1).join("");
-      arr.push(p);
+      arr.push(arr.splice(i, 1));
       i--;
     }
   }
