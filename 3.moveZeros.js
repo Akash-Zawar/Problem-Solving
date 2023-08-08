@@ -2,8 +2,7 @@
  * create a function and take array as parameter
  * store length of array in a variable to run a loop for fixed times
  * then run a loop and check for all 1 and slice them and push them in end of array at same time reduce counter by 1
- * the returned value from splice is in array form so convert in into string
- * Convert all string elements of array into numbers
+ * the returned value from splice is in array form so convert all elements of array into numbers
  *
  */
 
