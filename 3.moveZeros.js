@@ -8,15 +8,19 @@
 
 function arraySw(arr) {
   let len = arr.length;
+  let count = 0;
   for (let i = 0; i < len; i++) {
     if (arr[i] === 1) {
-      arr.push(arr.splice(i, 1));
+      arr.splice(i, 1);
+      arr.push(1);
       i--;
     }
+    count++;
+    if (count > len) {
+      break;
+    }
   }
-  for (let i = 0; i < arr.length; i++) {
-    arr[i] = parseInt(arr[i]);
-  }
+
   return arr;
 }
 
