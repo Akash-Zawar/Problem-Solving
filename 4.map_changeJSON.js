@@ -31,7 +31,7 @@ const p = [
 
 let changeArray = p.map((currentItem) => {
   if (!currentItem.isActive) {
-    return (currentItem.isActive = "isAvaliable");
+    return (currentItem.isActive = "Not Avaliable");
   }
   return (currentItem.isActive = "Avaliable");
 });
