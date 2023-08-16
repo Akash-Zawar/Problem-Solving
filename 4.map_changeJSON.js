@@ -29,12 +29,12 @@ const p = [
   },
 ];
 
-let changeArray = p.map((currentItem) => {
-  if (!currentItem.isActive) {
-    return (currentItem.isActive = "Not Avaliable");
-  }
-  return (currentItem.isActive = "Avaliable");
-});
+let changeArray = p.map(
+  (currentItem) =>
+    (currentItem.isActive = currentItem.isActive
+      ? "Avaliable"
+      : "Not Avaliable")
+);
 
 console.log(changeArray);
 console.log(p);
