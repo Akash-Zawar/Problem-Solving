@@ -29,7 +29,7 @@ const p = [
   },
 ];
 
-let changeArray = p.map(
+const changeArray = p.map(
   (currentItem) =>
     (currentItem.isActive = currentItem.isActive
       ? "Avaliable"
