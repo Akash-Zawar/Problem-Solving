@@ -38,3 +38,8 @@ const changeArray = p.map(
 
 console.log(changeArray);
 console.log(p);
+
+// const result = p.map((item) => ({
+//     ...item,
+//     isActive: item.isActive ? "Available" : "Not Available",
+//   }));
