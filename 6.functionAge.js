@@ -1,3 +1,3 @@
-let isQualified = (age) => (age >= 18 ? true : false);
+let isQualified = (age) => age >= 18;
 
-console.log(isQualified(20));
+console.log(isQualified(15));
