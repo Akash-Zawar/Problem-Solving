@@ -1,3 +1,3 @@
-let isQualified = (age) => age >= 18;
+const isQualified = (age) => age >= 18;
 
 console.log(isQualified(15));
