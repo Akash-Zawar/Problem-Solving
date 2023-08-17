@@ -27,9 +27,8 @@ const data = [
   },
 ];
 
-let ans = data.filter((item) => {
-  let p = item;
-  k = colors.filter((z) => p.color === z);
-  return p.color === k[0];
-});
+const ans = data.filter(
+  (item) => item.color == colors.filter((z) => item.color === z)
+);
+
 console.log(ans);
