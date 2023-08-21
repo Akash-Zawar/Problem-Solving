@@ -28,7 +28,8 @@ const data = [
 ];
 
 const ans = data.filter(
-  (item) => item.color == colors.filter((z) => item.color === z)
+  //   (item) => item.color == colors.filter((z) => item.color === z)
+  (item) => colors.includes(item.color)
 );
 
 console.log(ans);
