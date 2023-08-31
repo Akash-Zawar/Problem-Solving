@@ -1,3 +1,12 @@
+/**
+ * maintain a global variable
+ * create function which takes array as input
+ * run a loop on all array element
+ * now check whether element is number or array
+ * if number push
+ * if array then again call the function
+ */
+
 let k = [];
 
 const flattenArray = (arr) => {
