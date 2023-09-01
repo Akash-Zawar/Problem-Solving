@@ -22,7 +22,9 @@ var isValid = function (s) {
     "}": "{",
     "]": "[",
   };
-
+  if (s[0] === "(" || s[0] === "{" || s[0] === "[") {
+    return false;
+  }
   for (let i = 0; i < s.length; i++) {
     const currentBracket = s[i];
 
