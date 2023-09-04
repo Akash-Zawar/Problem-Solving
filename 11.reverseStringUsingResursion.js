@@ -12,4 +12,4 @@ const reverseStr = (str) => {
   return p;
 };
 
-console.log(reverseStr("Aradhan"));
+console.log(reverseStr("aradhan"));
