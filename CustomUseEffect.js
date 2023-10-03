@@ -5,6 +5,8 @@ const customUseEffect = {
   },
 };
 
-customUseEffect.setData(5);
+const [data = 25, setData] = customUseEffect;
 
-console.log(customUseEffect.data);
+setData(5);
+
+console.log(newData);

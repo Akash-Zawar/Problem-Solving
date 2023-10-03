@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="header">
+        <ul class="header-list">
+          <li class="footer-list-item para">Home Top</li>
+          <li class="footer-list-item para">About Top</li>
+          <li class="footer-list-item para">Contact Top</li>
+        </ul>
+      </div>
+      <section>
+        <div>
+          <div>
+            <div>
+              <div>
+                <p class="para">Hello para from nested</p>
+              </div>
+            </div>
+            <p class="para">Hello para from nested 2</p>
+            <p class="para">Hello para from nested 3</p>
+            <p class="para">Hello para from nested 4</p>
+            <p class="para">Hello para from nested 5</p>
+          </div>
+        </div>
+      </section>
+      <div id="footer">
+        <ul class="footer-list">
+          <li class="footer-list-item">Home</li>
+          <li class="footer-list-item">About</li>
+          <li class="footer-list-item">Contact</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  console.log(document.body);
+  function findElementsByClass(element, targetClass) {
+    const classList = [];
+    if (element.classList.contains(targetClass)) {
+      classList.push(element);
+    }
+    for (let i = 0; i < element.children.length; i++) {
+      const child = element.children[i];
+      classList.push(...findElementsByClass(child, targetClass));
+    }
+
+    return classList;
+  }
+  const elementsWithClass = findElementsByClass(document.body, "footer-list");
+  console.log(elementsWithClass);
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  function findElementsById(element, targetId) {
+    const results = [];
+    if (element.id === targetId) {
+      results.push(element);
+    }
+    for (let i = 0; i < element.children.length; i++) {
+      const child = element.children[i];
+      results.push(...findElementsById(child, targetId));
+    }
+
+    return results;
+  }
+  const elementsWithId = findElementsById(document.body, "footer");
+  console.log(elementsWithId);
+</script>
