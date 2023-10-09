@@ -25,4 +25,4 @@ const freqencySort = (a) => {
   return ans;
 };
 
-console.log(freqencySort("abcAbcAASDDSDbbsC"));
+console.log(freqencySort("aaaAAssSBBB"));
