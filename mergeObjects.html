@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const users = [
+      { id: 1, name: "Alice" },
+      { id: 2, name: "Bob" },
+      { id: 3, name: "Charlie" },
+    ];
+
+    const orders = [
+      { userId: 1, id: 101, name: "Product A", price: 10 },
+      { userId: 1, id: 102, name: "Product B", price: 20 },
+      { userId: 2, id: 103, name: "Product C", price: 15 },
+    ];
+
+    const mergeResponse = (users, orders) => {
+      let mergedData = [];
+      for (let i = 0; i < users.length; i++) {
+        let userOrder = [];
+        for (let j = 0; j < orders.length; j++) {
+          if (users[i].id === orders[j].userId) {
+            userOrder.push({
+              orderID: orders[j].id,
+              name: orders[j].name,
+              price: orders[j].price,
+            });
+          }
+        }
+        mergedData[i] = {
+          userID: users[i].id,
+          userName: users[i].name,
+          orders: userOrder,
+        };
+      }
+      return mergedData;
+    };
+
+    console.log(mergeResponse(users, orders));
+  </script>
+</html>
