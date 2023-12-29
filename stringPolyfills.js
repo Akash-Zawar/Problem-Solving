@@ -1,13 +1,4 @@
 // Write a pollyfill of toLowerCase, toUpperCase, Trim
-
-// String.prototype.myToLowerCase = function () {
-//   return this.replace(/[A-Z]/g, (match) =>
-//     String.fromCharCode(match.charCodeAt(0) + 32)
-//   );
-// };
-// const str = "asdf";
-// console.log(str.myToLowerCase());
-
 String.prototype.myToLowerCase = function () {
   return this.replace(/[A-Z]/g, (match) =>
     String.fromCharCode(match.charCodeAt(0) + 32)
